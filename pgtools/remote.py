@@ -2,6 +2,7 @@
 Functions for interacting with the Priogrid API
 """
 
+import textwrap
 import csv
 import os
 import requests
@@ -30,3 +31,10 @@ def getvar(vname):
     data = r.json()
 
     return lodToLot(data["cells"]) 
+
+def getmeta():
+    dest = os.path.join(BASE_URL,"variables")
+    r = requests.get(dest)
+    return r.json()
+
+

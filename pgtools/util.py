@@ -7,3 +7,5 @@ def writecsv(lot,fname):
         for r in lot:
             w.writerow(r)
 
+def correctRow(row):
+    return tuple((int(float(v)) for v in row))

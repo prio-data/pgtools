@@ -14,7 +14,9 @@ setuptools.setup(
         long_description_content_type="text/markdown",
         url = "https://www.github.com/prio-data/pgtools",
         packages = setuptools.find_packages(),
-        scripts=["bin/pgdl"],
+        scripts=[
+            "bin/pgt",
+            ],
         python_requires=">=3.7",
         install_requires=[
             "numpy==1.19.2"

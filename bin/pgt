@@ -1,0 +1,14 @@
+#! /usr/bin/env python
+
+import fire
+import pgtools.ops
+
+class Ops():
+
+    convert = staticmethod(pgtools.ops.convert)
+    download = staticmethod(pgtools.ops.download)
+    ls = staticmethod(pgtools.ops.list)
+
+
+if __name__ == "__main__":
+   fire.Fire(Ops)
