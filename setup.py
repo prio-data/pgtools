@@ -19,5 +19,8 @@ setuptools.setup(
             ],
         python_requires=">=3.7",
         install_requires=[
-            "numpy==1.19.2"
+            "numpy>=1.19.0",
+            "scipy>=1.5.0",
+            "fire==0.3.1",
+            "requests>=2.20.0"
         ])
