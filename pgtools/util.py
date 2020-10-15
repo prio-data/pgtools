@@ -2,8 +2,13 @@
 import csv
 import numpy as np
 
-def writecsv(lot,fname):
-    with open(fname,"w") as f:
+def writecsv(lot,f):
+    try:
+        f = open(fdescr,"w")
+    except:
+        pass
+
+    with f:
         w = csv.writer(f)
         for r in lot:
             w.writerow(r)

@@ -5,6 +5,7 @@ Functions for interacting with the Priogrid API
 import textwrap
 import csv
 import os
+
 import requests
 
 BASE_URL = "http://grid.prio.org/api/"

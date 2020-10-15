@@ -4,12 +4,13 @@ import numpy as np
 from pgtools.remote import getvar,getmeta
 from pgtools.util import writecsv,correctRow
 from pgtools.conversion import longformToSparseMatrices,domToDense
+import sys
 
 _FORMATS = {
    "long": (lambda x: x, writecsv) 
 }
 
-def download(vname,out,format=None):
+def download(vname,out=sys.stdout,format=None):
    if format is None:
       format = "long"
 
